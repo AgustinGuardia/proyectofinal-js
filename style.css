@@ -1,0 +1,145 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-family: sans-serif;
+}
+
+body{
+    background-image: url(img/2.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+main{
+    padding: 20px;
+    margin: auto;
+    margin-top: 100px;
+}
+
+.container{
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+}
+
+.contenedor_inicio{
+    margin: auto;
+    padding: 10px 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(92, 7, 7,0.3);
+}
+
+.contenedor_inicio {
+    color: aliceblue;
+    padding: 100px 20px;
+    transition: all 500ms;
+}
+
+.contenedor_inicio p, .contenedor_inicio button{
+    margin-top: 30px;
+}
+
+.contenedor_inicio h1{
+    font-size: 26px;
+    font-weight: 400;
+}
+
+.contenedor_inicio button{
+    padding: 10px 40px;
+    border: 3px solid aliceblue;
+    border-radius: 6px;
+    background: transparent;
+    color: aliceblue;
+    outline: none;
+    transition: all 500ms;
+}
+
+.contenedor_inicio button:hover{
+background: aliceblue;
+color: rgb(92, 7, 7);
+}
+
+/*form*/
+
+.contenedor_login{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    top: -180px;
+    left: 10px;
+    
+}
+
+.formulario_login{
+    
+    width: 100%;
+    padding: 80px 20px;
+    background-color: white;
+    position: absolute;
+    border-radius: 20px;
+}
+
+.formulario_login h2{
+    color: rgb(92, 7, 7);
+    font-size: 25px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+.formulario_login input{
+    margin-top: 20px;
+    padding: 10px;
+    width: 100%;
+    border: none;
+    font-size: 14px;
+    outline: none;
+}
+
+.formulario_login button{
+    margin: 40px;
+    outline: none;
+    font-size: 14px;
+    color: rgb(230, 96, 0);
+    border: 5px solid rgb(92, 7, 7);
+    border-radius: 4px;
+    background: rgb(92, 7, 7);
+}
+
+.formulario_login{
+    opacity: 1;
+    display: none;
+}
+
+
+@media screen and (max-width:850px){
+    main{
+        margin-top: 50px;
+    }
+
+    .contenedor_inicio{
+        max-width: 350px;
+        height: 300px;
+        flex-direction: column;
+        margin: auto;
+        position: absolute;
+    }
+
+    .contenedor_login{
+        top: -10px;
+        left: -5px;
+        margin: auto;
+    }
+
+    .formulario_login{
+        position: relative;
+    }
+}

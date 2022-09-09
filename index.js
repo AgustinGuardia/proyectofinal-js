@@ -6,15 +6,44 @@ class IS{
     }
 
 }
+
+document.getElementById("btn_iniciar_sesion").addEventListener("click",inicio_sesion);
+document.getElementById("btn_comenzar").addEventListener("click",registro);
 let entrada;
 let empresa1 ;
 const equiposMovistar=[];
 const equiposTelecentro=[];
 const equiposDtv=[];
+let contenedor_inicio=document.querySelector(".contenedor_inicio");
+let formulario_login = document.querySelector(".formulario_login");
+let contenedor_login = document.querySelector(".contenedor_login");
+let nombre;
+let ctr;
+let val;
 
-alert("Bienvenido Cree su usuario")
+function inicio_sesion() {
+    formulario_login.style.display= "block";
+    contenedor_inicio.style.opacity= "0";
+}
+const usuario1=[];
+function registro () {
+    let inputValues = document.getElementsByClassName("DatoInput"),
+    namesvalues= [].map.call(inputValues,function (dataInput){
+        usuario1.push(dataInput.value);
+    });
+    alert(usuario1);
+}
 
-const usuario1 = [];
+
+usuario1.forEach(function(dato){
+        console.log("el dato es:"+ dato);
+    });
+
+
+console.log(usuario1);
+/*alert("Bienvenido Cree su usuario")
+
+
 usuario1.push(new IS(prompt("Ingrese su nombre de usuario:"), prompt("Ingrese su contraseña:"),prompt("Ingrese nuevamente su contraseña:"))); 
 
 for (const usuario of usuario1) {
@@ -25,7 +54,7 @@ for (const usuario of usuario1) {
     alert("Ingrese los equipos de movistar");
         do{
             do {
-                entrada = (prompt("Ingrese el n° de equipo o  0 para finalizar:").toUpperCase())
+                entrada = (prompt("Ingrese el n° de equipo o  0 (cero) para finalizar:").toUpperCase())
                 if (entrada==0) 
                 {
                 i=10;   
@@ -44,7 +73,7 @@ usuario1.push(equiposMovistar)
         alert("Ingrese los equipos de telecentro");
         do{
             do{
-                entrada = (prompt("Ingrese el n° de equipo o 0 para finalizar:").toUpperCase())
+                entrada = (prompt("Ingrese el n° de equipo o 0 (cero) para finalizar:").toUpperCase())
                 if (entrada==0) 
                 {
                 i=10;   
@@ -61,7 +90,7 @@ usuario1.push(equiposMovistar)
         alert("Ingrese los equipos de directv");
             do{
                 do{
-                    entrada = (prompt("Ingrese el n° de equipo o 0 para finalizar:").toUpperCase())
+                    entrada = (prompt("Ingrese el n° de equipo o 0 (cero) para finalizar:").toUpperCase())
                     if (entrada==0) 
                     {
                     i=10;   
@@ -77,4 +106,4 @@ usuario1.push(equiposMovistar)
 
             for (const usuario of usuario1) {
                 alert(usuario.usuario + " ingreso\n"+ equiposMovistar.length + " equipos de movistar \n"+ equiposTelecentro.length + " equipos de telecentro\n" + equiposDtv.length + " equipos de directv\n ¡Sesion finalizada!" )
-            }
+            }*/

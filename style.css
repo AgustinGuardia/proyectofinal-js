@@ -45,10 +45,6 @@ main{
     margin-top: 30px;
 }
 
-.contenedor_inicio h1{
-    font-size: 26px;
-    font-weight: 400;
-}
 
 .contenedor_inicio button{
     padding: 10px 40px;
@@ -75,11 +71,9 @@ color: rgb(92, 7, 7);
     position: relative;
     top: -180px;
     left: 10px;
-    
 }
 
 .formulario_login{
-    
     width: 100%;
     padding: 80px 20px;
     background-color: white;
@@ -119,6 +113,57 @@ color: rgb(92, 7, 7);
     display: none;
 }
 
+.contenedor_mvt{
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    display: none;
+    top: -260px;
+    left: 10px;
+}
+.mvt{
+    margin: auto;
+    padding: 10px 20px;
+    text-align: center;
+    backdrop-filter: blur(10px);
+    background-color: rgba(92, 7, 7,0.3);
+}
+
+.mvt button{
+    padding: 5px 20px;
+    border: 3px solid aliceblue;
+    border-radius: 6px;
+    background: transparent;
+    color: aliceblue;
+    outline: none;
+    transition: all 500ms;
+    font-size: 12px;
+}
+
+.mvt h3{
+    font-size: 16px;
+    font-weight: 300;
+    color: aliceblue;
+}
+
+.contenedor_rp{
+    width: 80%;
+    max-width: 800px;
+    margin: auto;
+    position: relative;
+    top: -260px;
+    left: 10px;
+}
+
+#respuesta{
+    color: aliceblue;
+    background-color:rgba(92, 7, 7,0.3);
+    backdrop-filter: blur(10px);
+    font-family: sans-serif;
+    font-size: 26px;
+    text-align: center;
+}
 
 @media screen and (max-width:850px){
     main{
@@ -142,4 +187,13 @@ color: rgb(92, 7, 7);
     .formulario_login{
         position: relative;
     }
+
+    .contenedor_mvt{
+        top: 140px;
+    }
+
+    .contenedor_rp{
+        top: 140px;
+    }
+
 }

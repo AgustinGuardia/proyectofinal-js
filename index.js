@@ -7,40 +7,65 @@ class IS{
 
 }
 
-document.getElementById("btn_iniciar_sesion").addEventListener("click",inicio_sesion);
-document.getElementById("btn_comenzar").addEventListener("click",registro);
 let entrada;
 let empresa1 ;
-const equiposMovistar=[];
-const equiposTelecentro=[];
-const equiposDtv=[];
 let contenedor_inicio=document.querySelector(".contenedor_inicio");
 let formulario_login = document.querySelector(".formulario_login");
 let contenedor_login = document.querySelector(".contenedor_login");
-let nombre;
-let ctr;
-let val;
+let mvt = document.querySelector(".contenedor_mvt")
+const formulario= document.querySelector("#formulario");
+const scanMvt= document.getElementById("scanMvt");
+const fMvt=document.querySelector(".mvt")
+const usuario1 = [];
+const equiposMovistar=[];
+const equiposTelecentro=[];
+const equiposDtv=[];
+const respuesta= document.getElementById("respuesta")
+
+//eventos
+document.getElementById("btn_iniciar_sesion").addEventListener("click",inicio_sesion);
+formulario.addEventListener("submit",registro);
+scanMvt.addEventListener("click",scan);
+
+//mis funciones
 
 function inicio_sesion() {
     formulario_login.style.display= "block";
     contenedor_inicio.style.opacity= "0";
 }
-const usuario1=[];
-function registro () {
-    let inputValues = document.getElementsByClassName("DatoInput"),
-    namesvalues= [].map.call(inputValues,function (dataInput){
-        usuario1.push(dataInput.value);
-    });
-    alert(usuario1);
+
+
+function registro(e) {
+    e.preventDefault();
+    console.log("funciona");
+    usuario1.push(document.getElementById("usuario").value,document.getElementById("contraseña").value,document.getElementById("validacion").value);
+    formulario_login.style.display= "none";
+    mvt.style.display="block";
+
+}
+console.log(usuario1);
+
+function scan(e) {
+    e.preventDefault();
+        entrada=document.getElementById("equipo").value;
+        equiposMovistar.push(entrada);
+    console.log(equiposMovistar);
+    fMvt.reset();
+    if (entrada==0) {
+        mvt.style.display="none";
+        equiposMovistar.pop();
+        respuesta.textContent = "Ingresaste " + equiposMovistar.length + " equipos de movistar";
+    }
+    
 }
 
+/*function registro () {
+    usuario1.push(document.getElementById("usuario").value,document.getElementById("contraseña").value,document.getElementById("validacion").value);
+    console.log(usuario1);
+}*/
 
-usuario1.forEach(function(dato){
-        console.log("el dato es:"+ dato);
-    });
 
 
-console.log(usuario1);
 /*alert("Bienvenido Cree su usuario")
 
 
@@ -66,7 +91,7 @@ for (const usuario of usuario1) {
             equiposMovistar.push (entrada)
             console.log(equiposMovistar)
         } while (entrada !=0);
-        equiposMovistar.pop();
+        
 
 usuario1.push(equiposMovistar)
 

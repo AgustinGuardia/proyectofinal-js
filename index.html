@@ -17,22 +17,27 @@
         </div>
 
         <div class="contenedor_login">
-            <form action="" class="formulario_login">
+            <form id="formulario" class="formulario_login">
                 <h2>Iniciar sesion</h2>
-                <input type="text" class="DatoInput" placeholder="usuario">
-                <input type="password" class="DatoInput" placeholder="contraseña">
-                <input type="password" class="DatoInput" placeholder="validacion">
-                <button id="btn_comenzar" >Comenzar</button>
+                <input type="text" id="usuario" placeholder="usuario">
+                <input type="password" id="contraseña" placeholder="contraseña">
+                <input type="password" id="validacion" placeholder="validacion">
+                <button type="submit">Comenzar</button>
             </form>
         </div>
     </div>
     </main>
+<div class="contenedor_mvt">
+    <form class="mvt" >
+        <h3>Ingrese los equipos de movistar o 0 ("cero") para finalizar:</h3>
+        <input type="text" id="equipo">
+        <button id="scanMvt">Enviar</button>
+    </form>
+</div>
 
-
-
-
-
-
+<div class="contenedor_rp">
+<h2 id="respuesta"></h2>
+</div>
 
 
     <script src="index.js"></script>

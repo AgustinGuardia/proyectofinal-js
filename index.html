@@ -19,9 +19,16 @@
         <div class="contenedor_login">
             <form id="formulario" class="formulario_login">
                 <h2>Iniciar sesion</h2>
+                <div class="grupo_usuario">
                 <input type="text" id="usuario" placeholder="usuario">
+                </div>
+                <p class="form_grupousuario">El usuario tiene que ser de 4 a 16 digitos y solo puede tener numeros, letras y guion bajo</p>
+                <div class="grupo_contraseña">
                 <input type="password" id="contraseña" placeholder="contraseña">
-                <input type="password" id="validacion" placeholder="validacion">
+                </div><p class="form_grupocontraseña">Las contraseña tiene que ser de 4 a 12 digitos</p>
+                <div class="grupo_validacion">
+                <input type="password" id="validacion" placeholder="repetir contraseña">
+                </div><p class="form_grupovalidacion">La contraseñas no coinciden</p>
                 <button type="submit">Comenzar</button>
             </form>
         </div>

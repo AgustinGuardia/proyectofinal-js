@@ -90,12 +90,15 @@ color: rgb(92, 7, 7);
 }
 
 .formulario_login input{
-    margin-top: 20px;
     padding: 10px;
     width: 100%;
     border: none;
     font-size: 14px;
     outline: none;
+}
+
+.formulario_login div{
+    margin-top: 20px;
 }
 
 .formulario_login button{
@@ -112,6 +115,23 @@ color: rgb(92, 7, 7);
     opacity: 1;
     display: none;
 }
+
+/*Estado y validacion del formulario*/
+
+.form_error{
+    border: 2px solid rgb(167, 9, 9);
+}
+
+.form_grupousuario, .form_grupocontraseña, .form_grupovalidacion {
+    font-size: 12px;
+    padding: 10px;
+    display: none;
+}
+
+.form_grupoIncorrecto-activo{
+    display: block;
+}
+/*-----*/
 
 .contenedor_mvt{
     width: 80%;
@@ -145,6 +165,10 @@ color: rgb(92, 7, 7);
     font-size: 16px;
     font-weight: 300;
     color: aliceblue;
+}
+
+.mvt input{
+    width: 80%;
 }
 
 .contenedor_rp{

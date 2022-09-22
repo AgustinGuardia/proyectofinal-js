@@ -11,9 +11,8 @@ const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
 	contraseña: /^.{4,12}$/, // 4 a 12 digitos.
 }
-let clave;
+
 let entrada;
-let empresa1 ;
 let contenedor_inicio=document.querySelector(".contenedor_inicio");
 let formulario_login = document.querySelector(".formulario_login");
 let contenedor_login = document.querySelector(".contenedor_login");
@@ -94,7 +93,6 @@ function registro(e) {
     formulario.reset();
     formulario_login.style.display= "none";
     mvt.style.display="block";
-    
     }
 }
 console.log(usuario1);
@@ -108,7 +106,11 @@ function scan(e) {
     if (entrada==0) {
         mvt.style.display="none";
         equiposMovistar.pop();
-        respuesta.textContent = "Ingresaste " + equiposMovistar.length + " equipos de movistar";
+        Swal.fire({
+            icon: 'success',
+            title: usuario1[0],
+            text: "Ingresaste " + equiposMovistar.length + " equipos de movistar",
+        })
     }
     
 }

@@ -1,5 +1,0 @@
-Hola bruno, paso a comentarte:
-Mi proyecto  lo voy a usar para escanear los equipos(decodificadores y modems) en mi trabajo, ya tengo un excel que tiene un programa hecho con visual basic, pero lo hizo otra persona y no puedo editar el programa a placer entonces hacer uno yo era mas comodo, y ya que tenia que hacer este proyecto y no sabia que hacer empece con esto.
-Al programa le van a faltar muchas cosas, porque todavia no las vimos pero la idea a futuro es que usando una base de datos tener mas usuarios y que el escaneo quede guardado y no solo me devuelva el total. pero por ahora hice esto porque es un poco la base del proyecto y por lo que entendi con eso cumple con la pre-entrega.
-ACLARACIONES PARA EL USO DEL PROGRAMA:
-los equipos tienen codigos alfanumericos de entre 10 y 16 caracteres, por eso va a tener esas validaciones(no lo aclaro porque en teoria el programa es de uso unicamente con ese fin y quien ingresa el equipo ya lo sabe y no va a entrar otra cosa que el codigo del equipo)

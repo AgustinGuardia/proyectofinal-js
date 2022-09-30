@@ -11,7 +11,10 @@ const expresiones = {
 	usuario: /^[a-zA-Z0-9\_\-]{4,16}$/, // Letras, numeros, guion y guion_bajo
 	contraseña: /^.{4,12}$/, // 4 a 12 digitos.
 }
-
+let rg2;
+let rg3;
+let rg5;
+let user;
 let entrada;
 let contenedor_inicio=document.querySelector(".contenedor_inicio");
 let formulario_login = document.querySelector(".formulario_login");
@@ -25,7 +28,9 @@ const usuario1 = [];
 const equiposMovistar=[];
 const equiposTelecentro=[];
 const equiposDtv=[];
-const respuesta= document.getElementById("respuesta")
+const respuesta= document.getElementById("respuesta");
+let rg2mvt=[];
+let rgmvt=[];
 const campos={
     usuario:"false",
     contraseña: "false"
@@ -93,6 +98,7 @@ function registro(e) {
     formulario.reset();
     formulario_login.style.display= "none";
     mvt.style.display="block";
+    user = document.getElementById("usuario").value; 
     }
 }
 console.log(usuario1);
@@ -106,14 +112,26 @@ function scan(e) {
     if (entrada==0) {
         mvt.style.display="none";
         equiposMovistar.pop();
+        fetch("datos.json")
+            .then((resp)=>resp.json())
+            .then ((data)=>{
+                console.log(data[0])              
+                })
+                
         Swal.fire({
             icon: 'success',
             title: usuario1[0],
             text: "Ingresaste " + equiposMovistar.length + " equipos de movistar",
-        })
-    }
-    
-}
+        })}}
+        
+        /*if ("rguardia2"== user) {
+            
+        } else {
+            
+        }
+        Swal.fire({
+            title:"El usuario " + user + " tiene registrados"
+        })*/
 
 
 /* 1 */
